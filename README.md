@@ -1,6 +1,7 @@
 # Pythomate
 
-Breve descrição do pacote
+Pacote [pythomate](https://pypi.org/project/pythomate/) inicia fluxo(s) do Power Automate via linha de comando.
+Aliado ao agendador de tarefas Windows cria-se gatilho(s) de fluxo(s), iniciados apenas manualmente no plano gratuito.
 
 ## Instalação
 
