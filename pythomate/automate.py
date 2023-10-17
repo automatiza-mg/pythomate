@@ -1,15 +1,17 @@
 import pyautogui
 import time
 
-def run_flow(flow):	
-	# Open power automate
+def run_flow(flow):
+	# Add check to see if OS is Windows
+
+    # Open power automate
 	pyautogui.press('win')
 	pyautogui.write('power automate', interval=0.15)
 	pyautogui.press('enter')
 
 	# Check if power automate opened
 	import ipdb; ipdb.set_trace(context=10)
-	open_image = 'power_automate_check_open.png' 
+	open_image = 'power_automate_check_open.png'
 	check_load_page(open_image)
 
 	# Maximixe power automate
