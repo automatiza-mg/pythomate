@@ -8,6 +8,7 @@ sys.path.insert(0, os.path.abspath('..'))
 INSTALL_REQUIRES = [
     'click==8.1.7',
     'PyAutoGUI==0.9.54',
+    'Pillow==10.1.0',
 ]
 
 if __name__ == '__main__':
