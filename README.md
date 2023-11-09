@@ -29,4 +29,6 @@ Veja o arquivo [`CONTRIBUTING.md`](CONTRIBUTING.md) para mais detalhes.
 O **pythomete** é licenciado sob a licença MIT.
 Veja o arquivo [`LICENSE.txt`](LICENSE.txt) para mais detalhes.
 
+Teste push.
+
 [^1]: Gatilhos automáticos de fluxo(s) não são permitidos nas versões gratúitas do Power Automate.
