@@ -30,6 +30,3 @@ def run_flow(flow):
 									  )
 	
 	ok_button.click_input()
-
-if __name__ == '__main__':
-	run_flow('ffak')
