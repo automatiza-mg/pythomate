@@ -10,7 +10,6 @@ def run_flow(flow):
 	pyautogui.press('enter')
 
 	# Check if power automate opened
-	import ipdb; ipdb.set_trace(context=10)
 	open_image = 'power_automate_check_open.png'
 	check_load_page(open_image)
 
@@ -48,5 +47,52 @@ def check_load_page(picture):
 
 	return None
 
+def run_flow_2(flow):
+	from pywinauto.application import Application
+	# Este stackoverflow responde aonde está o executável do power automate
+	# Mostra também que é possível realizar a chamada via linha de comando, mas ao tentar ele ainda pede alguns cliques antes de iniciar o fluxo
+	# https://stackoverflow.com/questions/75714376/cant-find-pad-console-host-exe-on-my-pc-to-run-flows-through-powershell
+	
+	# vídeo que ajudou https://www.youtube.com/watch?v=R4E4IOIC63s
+	import ipdb; ipdb.set_trace(context=10)
+	power_automate_exe_path = 'C:/Program Files (x86)/Power Automate Desktop/PAD.Console.Host.exe'
+	app = Application(backend="uia").start(power_automate_exe_path).connect(
+																			title='Power Automate',
+																			timeout=10,
+																			)
+	
+	dlg_spec = app.PowerAutomate
+	
+	# Clica linha do fluxo
+	flow_line = dlg_spec.child_window(
+									  title=flow, 
+									  control_type='DataItem',
+									  ).wrapper_object()
+	flow_line.click_input()
+	# Clica na execução do fluxo	
+	flow_button = dlg_spec.child_window(
+										title="Executar", 
+										auto_id="StartFlowButton", 
+										control_type="Button"
+										).wrapper_object()
+	flow_button.click_input()
+	
+
+	dlg_spec.print_control_identifiers()
+
+
+def run_flow_3(flow):
+	from pywinauto.application import Application
+	power_automate_exe_path = 'C:/Program Files (x86)/Power Automate Desktop/PAD.Console.Host.exe'
+	app = Application(backend="uia").start(power_automate_exe_path).connect(
+																			title='Power Automate',
+																			timeout=100,
+																			)
+	dlg_spec = app.PowerAutomate
+	import ipdb; ipdb.set_trace(context=10)
+	
+	
+
 if __name__ == '__main__':
-	run_flow('test-pythomate')
+	# run_flow('ffak')
+	run_flow_2('ffak')
