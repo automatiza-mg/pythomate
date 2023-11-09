@@ -54,13 +54,11 @@ def run_flow_2(flow):
 	# https://stackoverflow.com/questions/75714376/cant-find-pad-console-host-exe-on-my-pc-to-run-flows-through-powershell
 	
 	# vídeo que ajudou https://www.youtube.com/watch?v=R4E4IOIC63s
-	import ipdb; ipdb.set_trace(context=10)
 	power_automate_exe_path = 'C:/Program Files (x86)/Power Automate Desktop/PAD.Console.Host.exe'
 	app = Application(backend="uia").start(power_automate_exe_path).connect(
 																			title='Power Automate',
-																			timeout=10,
+																			timeout=100,
 																			)
-	
 	dlg_spec = app.PowerAutomate
 	
 	# Clica linha do fluxo
@@ -76,23 +74,18 @@ def run_flow_2(flow):
 										control_type="Button"
 										).wrapper_object()
 	flow_button.click_input()
-	
-
-	dlg_spec.print_control_identifiers()
 
 
-def run_flow_3(flow):
-	from pywinauto.application import Application
-	power_automate_exe_path = 'C:/Program Files (x86)/Power Automate Desktop/PAD.Console.Host.exe'
-	app = Application(backend="uia").start(power_automate_exe_path).connect(
-																			title='Power Automate',
-																			timeout=100,
-																			)
-	dlg_spec = app.PowerAutomate
-	import ipdb; ipdb.set_trace(context=10)
+	ok_button = dlg_spec.child_window(
+									  title="OK",
+									  auto_id="Button",
+									  control_type="Button"
+									  )
 	
-	
+	# import ipdb; ipdb.set_trace(context=10)
+	# dlg_spec.print_control_identifiers()
+	ok_button.click_input()
 
 if __name__ == '__main__':
 	# run_flow('ffak')
-	run_flow_2('ffak')
+	run_flow_2('conectarh')
