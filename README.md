@@ -1,7 +1,7 @@
 # Pythomate
 
-Pacote [pythomate](https://pypi.org/project/pythomate/) inicia fluxo(s) do Power Automate via linha de comando.
-Aliado ao agendador de tarefas Windows cria-se gatilho(s) de fluxo(s)[^1].
+Pacote [pythomate](https://pypi.org/project/pythomate/) inicia fluxo(s) e rotina(s) de ferramentas Microsoft (como Power Automate e Power Bi) via linha de comando.
+Aliado ao agendador de tarefas Windows cria-se gatilho(s)[^1].
 
 ## Instalação
 
@@ -13,7 +13,7 @@ Ele pode ser instalado utilizando-se o comando[^2]:
 $ pip install pythomate
 ```
 
-Necessário adicionar ao `PATH` do Windows caminho de instalação da ferramenta Power Automate[^3].
+Necessário adicionar ao `PATH` do Windows caminho de instalação das ferramentas Microsoft desejadas[^3].
 
 ## Uso
 
@@ -22,8 +22,10 @@ Diretamente na linha de comando:
 ```bash
 # Não copie e cole cegamente o comando abaixo.
 # Substituo <nome-fluxo> pelo nome do fluxo que deseja iniciar.
-$ pythomate run <nome-fluxo>
+$ pythomate run <ferramenta> <nome-fluxo>
 ```
+
+Para maiores informações, consulte documentação disponível no próprio CLI, via `pythomate --help`.
 
 ## Contribuições
 
@@ -36,6 +38,6 @@ Veja o arquivo [`LICENSE.txt`](LICENSE.txt) para mais detalhes.
 
 Teste push.
 
-[^1]: Gatilhos automáticos de fluxo(s) não são permitidos nas versões gratúitas do Power Automate.
+[^1]: Gatilhos que, em geral, não são permitidos em versões gratúitas destas ferramentas.
 [^2]: Sugerimos a utilização da Git Bash disponível na instalação do programa [Git for Windows](https://gitforwindows.org/). 
-[^3]: Power Automate, em geral, encontra-sem instalado em `C:/Program Files (x86)/Power Automate Desktop/`.
+[^3]: Como exemplo, sabemos que a ferraemnta Power Automate, em geral, encontra-se instalada em `C:/Program Files (x86)/Power Automate Desktop/`.
