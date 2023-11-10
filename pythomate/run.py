@@ -1,3 +1,4 @@
+import click
 from pywinauto.application import Application
 
 def run_flow(flow):
@@ -31,5 +32,7 @@ def run_flow(flow):
 
 	ok_button.click_input()
 
-if __name__ == '__main__':
-	run_flow('ffak')
+@click.command(name='run')
+@click.pass_context
+def run_cli(flow):
+  run_flow(flow)
