@@ -1,7 +1,7 @@
 import click
 from pywinauto.application import Application
 
-def run_flow(flow):
+def run_power_automate_flow(flow):
 	power_automate_exe_path = 'PAD.Console.Host.exe'
 	app = Application(backend="uia").start(power_automate_exe_path).connect(
 																			title='Power Automate',
@@ -32,7 +32,10 @@ def run_flow(flow):
 
 	ok_button.click_input()
 
-@click.command(name='run')
-@click.pass_context
-def run_cli(flow):
-  run_flow(flow)
+@click.command(name='automate')
+@click.argument('flow', required=True)
+def run_power_automate_flow_cli(flow):
+  """
+  	pythomate run automate <nome-fluxo>
+  """
+  run_power_automate_flow(flow)
