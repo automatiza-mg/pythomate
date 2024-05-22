@@ -9,6 +9,13 @@ def run_power_automate_flow(flow):
 																			)
 	dlg_spec = app.PowerAutomate
 
+	# Clica Meus fluxos
+	flow_line = dlg_spec.child_window(
+										title="Meus fluxos",
+										control_type="TabItem",
+										).wrapper_object()
+	flow_line.click_input()
+	
 	# Clica linha do fluxo
 	flow_line = dlg_spec.child_window(
 									  title=flow,
