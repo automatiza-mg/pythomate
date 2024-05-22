@@ -5,7 +5,7 @@ def run_power_automate_flow(flow):
 	power_automate_exe_path = 'PAD.Console.Host.exe'
 	app = Application(backend="uia").start(power_automate_exe_path).connect(
 																			title='Power Automate',
-																			timeout=100,
+																			timeout=1000,
 																			)
 	dlg_spec = app.PowerAutomate
 
@@ -15,7 +15,7 @@ def run_power_automate_flow(flow):
 										control_type="TabItem",
 										).wrapper_object()
 	flow_line.click_input()
-	
+
 	# Clica linha do fluxo
 	flow_line = dlg_spec.child_window(
 									  title=flow,
