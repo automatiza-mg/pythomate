@@ -13,7 +13,7 @@ INSTALL_REQUIRES = [
 if __name__ == '__main__':
   setup(
       name='pythomate',
-      version='0.3',
+      version='0.4',
       author='Diretoria Central de Desburocratização - DCD/SUGES/SEPLAG - Automatiza.MG',
       author_email='simplificacao@planejamento.mg.gov.br',
       description='Automatiza acionamento de fluxos Power Automate.',
