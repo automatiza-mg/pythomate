@@ -42,7 +42,7 @@ def run_power_automate_flow(flow):
 @click.command(name='automate')
 @click.argument('flow', required=True)
 def run_power_automate_flow_cli(flow):
-  """
-  	pythomate run automate <nome-fluxo>
-  """
-  run_power_automate_flow(flow)
+    """
+    pythomate run automate <nome-fluxo>
+    """
+    run_power_automate_flow(flow)
