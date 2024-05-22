@@ -20,8 +20,8 @@ Necessário adicionar ao `PATH` do Windows caminho de instalação das ferrament
 Diretamente na linha de comando:
 
 ```bash
-# Não copie e cole cegamente o comando abaixo.
-# Substituo <nome-fluxo> pelo nome do fluxo que deseja iniciar.
+# Substitua <ferramenta> pela ferramenta que se deseja acionar (automate ou bi).
+# Substitua <nome-fluxo> pelo nome do fluxo que deseja iniciar.
 $ pythomate run <ferramenta> <nome-fluxo>
 ```
 
@@ -40,4 +40,4 @@ Teste push.
 
 [^1]: Gatilhos que, em geral, não são permitidos em versões gratúitas destas ferramentas.
 [^2]: Sugerimos a utilização da Git Bash disponível na instalação do programa [Git for Windows](https://gitforwindows.org/). 
-[^3]: Como exemplo, sabemos que a ferraemnta Power Automate, em geral, encontra-se instalada em `C:/Program Files (x86)/Power Automate Desktop/`.
+[^3]: Como exemplo, sabemos que a ferramenta Power Automate, em geral, encontra-se instalada em `C:/Program Files (x86)/Power Automate Desktop/`.
