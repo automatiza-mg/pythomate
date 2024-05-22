@@ -13,8 +13,8 @@ INSTALL_REQUIRES = [
 if __name__ == '__main__':
   setup(
       name='pythomate',
-      version='0.2',
-      author='O Laboratório de Inovação em Governo - LAB.mg',
+      version='0.3',
+      author='Diretoria Central de Desburocratização - DCD/SUGES/SEPLAG - Automatiza.MG',
       author_email='simplificacao@planejamento.mg.gov.br',
       description='Automatiza acionamento de fluxos Power Automate.',
       long_description_content_type='text/markdown',
