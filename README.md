@@ -3,6 +3,8 @@
 Pacote [pythomate](https://pypi.org/project/pythomate/) inicia fluxo(s) e rotina(s) de ferramentas Microsoft (como Power Automate e Power Bi)[^1] via linha de comando.
 Aliado ao agendador de tarefas Windows cria-se gatilho(s)[^2].
 
+[![Watch the video](https://img.youtube.com/vi/09ceWwO6Xx0/maxresdefault.jpg)](https://youtu.be/09ceWwO6Xx0)
+
 ## Instalação
 
 O `pythomate` está disponível no Python Package Index - [PyPI](https://pypi.org/project/pythomate/), sendo **compatível apenas com sistema operacional Windows**.
